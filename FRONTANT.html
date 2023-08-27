@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            pharmacy
+        </title>
+            <link rel="stylesheet" href="style.css">
+            <script>
+                function validateForm() {
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+        
+                    // Email validation
+                    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                    if (!emailPattern.test(email)) {
+                        alert("Please enter a valid email address.");
+                        return false;
+                    }
+        
+                    // Password validation
+                    if (password.length < 8) {
+                        alert("Password must be at least 8 characters long.");
+                        return false;
+                    }
+        
+                    return true; // Form submission allowed
+                }
+            </script>
+        </head>
+    <body>
+        <form class="regs" onsubmit="return validateForm()" action="hoem.html" method="post">
+        <div class="banner">
+            <section class="heading">
+                <div class="content">
+                  <h2>PHARMACARE</h2>
+                  <h2>PHARMACARE</h2>
+                </div>
+              </section>
+              
+            <div class="navbar">
+                <div class="login">
+                    <p class="na">LOGIN</p><hr>
+                    <label for="email">Email:</label>
+                    <input type="text" class="username" placeholder="EMAIL ID" name="email" id="email" required><br><br>
+                    <label for="password">Password:</label>
+                    <input class="username" type="password" name="password" placeholder="PASSWORD" id="password" required><br><br><br>
+                    <button class="explore">LOGIN<span class="icon-right"></span><span class="icon-right after"></span></button>
+                </div>
+        </div>
+    </form>
+    </body>
+</html>
